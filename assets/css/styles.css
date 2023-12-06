@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: #ffb900;
+    --font-heading: "Sen", sans-serif;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -26,8 +31,12 @@ a {
     text-align: center;
     font-size: 1.6rem;
     font-weight: 600;
-    border-radius: 24.5px;
+    border-radius: 999px;
     background: #171100;
+}
+
+.btn:hover {
+    opacity: 0.9;
 }
 
 .main-content {
@@ -46,6 +55,7 @@ a {
 .header.fixed {
     position: sticky;
     top: -28px;
+    z-index: 1;
 }
 
 .header .body {
@@ -105,12 +115,10 @@ a {
     display: flex;
 }
 
+/* -------- Hero left ----------- */
 .hero .media-block {
     position: relative;
     width: 48%;
-}
-.hero .content-block {
-    width: 52%;
 }
 
 .hero .media-block .img {
@@ -169,4 +177,80 @@ a {
     font-size: 1.8rem;
     font-weight: 600;
     line-height: 1.67; /* 166.667% */
+}
+
+/* -------- Hero right ----------- */
+.hero .content-block {
+    width: 52%;
+    padding: 64px 0 0 130px;
+}
+
+.hero .heading {
+    font-family: var(--font-heading);
+    font-size: 5.8rem;
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: -0.02em;
+    color: #171100;
+}
+
+.hero .desc {
+    margin-top: 22px;
+    color: #5f5b53;
+    font-size: 1.8rem;
+    line-height: 1.67; /* 166.667% */
+}
+
+.hero .cta-group {
+    display: flex;
+    align-items: center;
+    margin: 38px 0 48px;
+}
+
+.hero-cta {
+    min-width: 180px;
+    line-height: 64px;
+    border-radius: 32px;
+    background: var(--primary-color);
+}
+
+.hero .watch-video {
+    display: flex;
+    align-items: center;
+    margin-left: 28px;
+    border: none;
+    background: #fff;
+    cursor: pointer;
+}
+
+.hero .watch-video .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: 0px 8px 16px 0px #00000012;
+}
+
+.hero .watch-video span {
+    margin-left: 14px;
+    color: #171100;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67;
+}
+
+.hero .stats {
+    margin: 8px 0 0 -29px;
+}
+
+.hero .stats strong {
+    padding: 0 8px 0 28px;
+    font-family: var(--font-heading);
+    color: #171100;
+    font-size: 4.4rem;
+    font-weight: 700;
+    line-height: 1.23; /* 122.727% */
 }
